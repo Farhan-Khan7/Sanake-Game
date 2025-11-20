@@ -1,43 +1,95 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html,body{
+
+html,
+body {
     height: 100%;
     width: 100%;
 }
-:root{
-   /* Background Color  */
-    --bg--primary--color : #111;
+
+:root {
+    /* Background Color  */
+    --bg--primary--color: #111;
     /* Font Color */
-    --text--primary-color : #fff;
+    --text--primary-color: #fff;
 
     /* padding variables */
-    --space-xs : 4px;
-    --space-sm : 8px;
-    --space-md : 16px;
-    --space-lg : 24px;
-    --space-xl : 32px;
-    --space-2xl : 40px;
-    --space-3xl : 48px;
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 40px;
+    --space-3xl: 48px;
+
+    /* Border Color */
+    --border-primary-color: #333333;
+
+    /* Border Radius  */
+    --border-radius-xs: 4px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-2xl: 24px;
 
 }
 
-html{
+html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: var(--bg--primary--color);
     color: var(--text--primary-color);
 }
-main,section{
+
+main,
+section {
     width: 100%;
     height: 100%;
 }
-section{
-    padding: var(--space-md);
+
+section {
+    padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: var(--space-lg);
+    /* background-color: #333333; */
+
 }
-section .infos{
+
+section .infos {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.info {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.board {
+    border: 1px solid var(--border-primary-color);
+    /* background-color: #111; */
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+}
+
+.block {
+    /* box-sizing: border-box; */
+    border: 1px solid var(--border-primary-color);
+    /* width: 50px; */
+    /* height: 50px; */
+    border: 1px solid #444;
+    /* box-sizing: border-box; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
