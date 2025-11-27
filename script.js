@@ -147,10 +147,11 @@ function restartGame() {
         blocks[`${segment.x}-${segment.y}`].classList.remove("fill");
 
     })
-
+    time = `00-00`
     Score = 0;
     scoreElement.innerHTML = Score
     highScoreElement.innerHTML = highScore
+    timerElement.innerHTML= time
     modal.style.display = "none"
     direction = "down"
     snake = [ {x: 0, y: 0} ]
